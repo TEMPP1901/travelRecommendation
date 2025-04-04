@@ -3,140 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelBloom</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Beach background */
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-        }
-        .navbar {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            box-sizing: border-box;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .navbar input {
-            padding: 5px;
-            width: 200px;
-            border: none;
-            border-radius: 4px;
-        }
-        .navbar button {
-            padding: 5px 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-            background: #4CAF50;
-            color: white;
-        }
-        .navbar button:hover {
-            background: #45a049;
-        }
-        .intro {
-            text-align: center;
-            color: white;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.5);
-            margin-top: 60px;
-        }
-        .social-icons img {
-            width: 30px;
-            margin: 10px;
-        }
-        #results {
-            color: white;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            margin: 20px;
-            border-radius: 8px;
-        }
-        #results img {
-            max-width: 200px;
-            margin: 10px 0;
-            border-radius: 4px;
-        }
-        section {
-            padding: 20px;
-        }
-        form input, form textarea {
-            display: block;
-            width: 300px;
-            margin: 10px auto;
-            padding: 8px;
-            border-radius: 4px;
-            border: none;
-        }
-        form button {
-            padding: 8px 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background: #45a049;
-        }
-    </style>
+    <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="style.css"> <!-- Thêm nếu cần CSS -->
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
-        <input type="text" id="searchInput" placeholder="Search beaches, temples, countries">
+    <!-- Thanh điều hướng -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="contact_us.html">Contact Us</a>
+        <input type="text" id="searchBar" placeholder="Enter keyword...">
         <button id="searchBtn">Search</button>
-        <button id="resetBtn">Reset</button>
+        <button id="clearBtn">Clear</button>
     </nav>
+
+    <!-- Trang chủ -->
     <section id="home">
-        <div class="intro">
-            <h1>Welcome to TravelBloom</h1>
-            <p>Explore amazing travel destinations tailored to your interests!</p>
-        </div>
-        <div class="social-icons">
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
-        </div>
-        <div id="results"></div>
-    </section>
-    <section id="about">
-        <div class="intro">
-            <h2>About Us</h2>
-            <p>TravelBloom is your go-to platform for discovering travel destinations that match your passions.</p>
-            <h3>Our Team</h3>
-            <ul>
-                <li>Jane Doe - CEO</li>
-                <li>John Smith - Lead Developer</li>
-                <li>Emily Johnson - Travel Expert</li>
-            </ul>
+        <h1>Welcome to Travel Explore!</h1>
+        <p>Discover amazing places around the world with us.</p>
+        <img src="background.jpg" alt="Travel Background">
+        <div id="social-icons">
+            <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
         </div>
     </section>
-    <section id="contact">
-        <div class="intro">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
+
+    <!-- Kết quả gợi ý -->
+    <div id="results"></div>
+
     <script src="travel_recommendation.js"></script>
 </body>
 </html>
