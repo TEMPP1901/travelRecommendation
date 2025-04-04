@@ -3,163 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendation</title>
+    <title>TravelBloom</title>
     <style>
-        /* CSS nội tuyến */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Beach background */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
         }
-
-        nav {
-            background-color: #333;
-            color: white;
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
             display: flex;
-            justify-content: space-between;
+            gap: 20px;
             align-items: center;
-            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
         }
-
-        nav a {
+        .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            font-weight: bold;
         }
-
-        nav input, nav button {
-            margin-left: 10px;
-            padding: 5px 10px;
-        }
-
-        .section {
-            padding: 50px;
-            text-align: center;
-            background-color: #fff;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .background-img {
-            width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 10px 0;
-        }
-
-        #social-icons {
-            margin-top: 20px;
-        }
-
-        .icon {
-            width: 30px;
-            height: 30px;
-            margin: 0 5px;
-        }
-
-        .form-input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            color: white;
-            background-color: #007bff;
+        .navbar input {
+            padding: 5px;
+            width: 200px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
+        }
+        .navbar button {
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background: #4CAF50;
+            color: white;
+        }
+        .navbar button:hover {
+            background: #45a049;
+        }
+        .intro {
+            text-align: center;
+            color: white;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 60px;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 10px;
+        }
+        #results {
+            color: white;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            border-radius: 8px;
+        }
+        #results img {
+            max-width: 200px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        section {
+            padding: 20px;
+        }
+        form input, form textarea {
+            display: block;
+            width: 300px;
+            margin: 10px auto;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+        form button {
+            padding: 8px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
         }
-
-        .results {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .recommendation {
-            margin: 20px 0;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .recommendation img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .recommendation h2 {
-            margin: 10px 0;
-            color: #333;
-        }
-
-        .recommendation p {
-            color: #555;
+        form button:hover {
+            background: #45a049;
         }
     </style>
 </head>
 <body>
-    <!-- Thanh điều hướng -->
-    <nav>
+    <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact Us</a>
-        <input type="text" id="searchBar" placeholder="Enter keyword...">
+        <input type="text" id="searchInput" placeholder="Search beaches, temples, countries">
         <button id="searchBtn">Search</button>
-        <button id="clearBtn">Clear</button>
+        <button id="resetBtn">Reset</button>
     </nav>
-
-    <!-- Phần Home -->
-    <section id="home" class="section">
-        <h1>Explore the World</h1>
-        <p>Find your next adventure with us!</p>
-        <img src="background.jpg" alt="Travel Background" class="background-img">
-        <div id="social-icons">
-            <a href="#"><img src="facebook_icon.png" alt="Facebook" class="icon"></a>
-            <a href="#"><img src="twitter_icon.png" alt="Twitter" class="icon"></a>
+    <section id="home">
+        <div class="intro">
+            <h1>Welcome to TravelBloom</h1>
+            <p>Explore amazing travel destinations tailored to your interests!</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+        </div>
+        <div id="results"></div>
+    </section>
+    <section id="about">
+        <div class="intro">
+            <h2>About Us</h2>
+            <p>TravelBloom is your go-to platform for discovering travel destinations that match your passions.</p>
+            <h3>Our Team</h3>
+            <ul>
+                <li>Jane Doe - CEO</li>
+                <li>John Smith - Lead Developer</li>
+                <li>Emily Johnson - Travel Expert</li>
+            </ul>
         </div>
     </section>
-
-    <!-- Phần About Us -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>We are passionate about connecting travelers with amazing destinations!</p>
-        <ul>
-            <li>Jane Doe - Developer</li>
-            <li>John Smith - Designer</li>
-        </ul>
+    <section id="contact">
+        <div class="intro">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </section>
-
-    <!-- Phần Contact Us -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required class="form-input">
-            <input type="email" placeholder="Your Email" required class="form-input">
-            <textarea placeholder="Your Message" required class="form-input"></textarea>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
-
-    <!-- Khu vực kết quả -->
-    <div id="results" class="results"></div>
-
     <script src="travel_recommendation.js"></script>
 </body>
 </html>

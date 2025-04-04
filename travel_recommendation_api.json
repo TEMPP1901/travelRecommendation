@@ -1,38 +1,38 @@
-[
-    {
-        "keyword": "beach",
-        "name": "Bondi Beach",
-        "description": "A beautiful beach in Sydney, Australia.",
-        "imageUrl": "bondi_beach.jpg"
-    },
-    {
-        "keyword": "beach",
-        "name": "Maya Bay",
-        "description": "A stunning bay surrounded by cliffs in Thailand.",
-        "imageUrl": "maya_bay.jpg"
-    },
-    {
-        "keyword": "temple",
-        "name": "Angkor Wat",
-        "description": "A majestic temple complex in Cambodia.",
-        "imageUrl": "angkor_wat.jpg"
-    },
-    {
-        "keyword": "temple",
-        "name": "Wat Arun",
-        "description": "A serene Buddhist temple in Bangkok, Thailand.",
-        "imageUrl": "wat_arun.jpg"
-    },
-    {
-        "keyword": "country",
-        "name": "Japan",
-        "description": "A country known for its culture and cherry blossoms.",
-        "imageUrl": "japan.jpg"
-    },
-    {
-        "keyword": "country",
-        "name": "Italy",
-        "description": "Famous for its art, architecture, and cuisine.",
-        "imageUrl": "italy.jpg"
-    }
-]
+{
+    "beaches": [
+        {
+            "name": "Malibu",
+            "description": "Sunny beaches in California.",
+            "imageUrl": "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a"
+        },
+        {
+            "name": "Bora Bora",
+            "description": "Tropical paradise in French Polynesia.",
+            "imageUrl": "https://images.unsplash.com/photo-1519047269169-0e9d12e995d6"
+        }
+    ],
+    "temples": [
+        {
+            "name": "Angkor Wat",
+            "description": "Ancient temple in Cambodia.",
+            "imageUrl": "https://images.unsplash.com/photo-1562602833-0f9d38836a66"
+        },
+        {
+            "name": "Kyoto Temple",
+            "description": "Serenity in Japan.",
+            "imageUrl": "https://images.unsplash.com/photo-1542051841857-5f90071e7988"
+        }
+    ],
+    "countries": [
+        {
+            "name": "Italy",
+            "description": "Rich history and culture.",
+            "imageUrl": "https://images.unsplash.com/photo-1518581252057-194d3456ff7d"
+        },
+        {
+            "name": "Japan",
+            "description": "Blend of old and new.",
+            "imageUrl": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9"
+        }
+    ]
+}
