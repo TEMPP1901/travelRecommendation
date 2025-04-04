@@ -26,13 +26,13 @@
     {
         "keyword": "country",
         "name": "Japan",
-        "description": "A country known for its culture, technology, and cherry blossoms.",
+        "description": "A country known for its technology and cherry blossoms.",
         "imageUrl": "japan.jpg"
     },
     {
         "keyword": "country",
         "name": "Italy",
-        "description": "Famous for its art, architecture, and delicious cuisine.",
+        "description": "Famous for its art, architecture, and cuisine.",
         "imageUrl": "italy.jpg"
     }
 ]
