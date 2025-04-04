@@ -2,11 +2,11 @@
 fetch('./travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
-        // Tìm kiếm gợi ý
         const searchBtn = document.getElementById('searchBtn');
         const clearBtn = document.getElementById('clearBtn');
         const results = document.getElementById('results');
 
+        // Xử lý khi bấm nút "Search"
         searchBtn.addEventListener('click', () => {
             const keyword = document.getElementById('searchBar').value.toLowerCase();
             results.innerHTML = ""; // Xóa kết quả cũ
@@ -23,6 +23,7 @@ fetch('./travel_recommendation_api.json')
             });
         });
 
+        // Xử lý khi bấm nút "Clear"
         clearBtn.addEventListener('click', () => {
             results.innerHTML = "";
             document.getElementById('searchBar').value = "";

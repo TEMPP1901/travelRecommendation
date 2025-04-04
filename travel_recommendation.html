@@ -4,26 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Recommendation</title>
+    <style>
+        /* CSS nội tuyến */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav input, nav button {
+            margin-left: 10px;
+            padding: 5px 10px;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .background-img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        #social-icons {
+            margin-top: 20px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+
+        .form-input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .results {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .recommendation {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .recommendation img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .recommendation h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .recommendation p {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <!-- Thanh điều hướng -->
     <nav>
-        <a href="home.html">Home</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact_us.html">Contact Us</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
         <input type="text" id="searchBar" placeholder="Enter keyword...">
         <button id="searchBtn">Search</button>
         <button id="clearBtn">Clear</button>
     </nav>
 
-    <!-- Trang Home -->
-    <section id="home">
+    <!-- Phần Home -->
+    <section id="home" class="section">
         <h1>Explore the World</h1>
         <p>Find your next adventure with us!</p>
+        <img src="background.jpg" alt="Travel Background" class="background-img">
+        <div id="social-icons">
+            <a href="#"><img src="facebook_icon.png" alt="Facebook" class="icon"></a>
+            <a href="#"><img src="twitter_icon.png" alt="Twitter" class="icon"></a>
+        </div>
     </section>
 
-    <!-- Kết quả gợi ý -->
-    <div id="results"></div>
+    <!-- Phần About Us -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We are passionate about connecting travelers with amazing destinations!</p>
+        <ul>
+            <li>Jane Doe - Developer</li>
+            <li>John Smith - Designer</li>
+        </ul>
+    </section>
+
+    <!-- Phần Contact Us -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required class="form-input">
+            <input type="email" placeholder="Your Email" required class="form-input">
+            <textarea placeholder="Your Message" required class="form-input"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- Khu vực kết quả -->
+    <div id="results" class="results"></div>
 
     <script src="travel_recommendation.js"></script>
 </body>
